@@ -1,0 +1,32 @@
+.game-card {
+    height: 100vh;
+    font-family: 'Open Sans', monospace;
+    background-size: cover;
+    background-image: url(img/background.jpg);
+    border-radius: 50%;
+}
+
+.card-body{
+    color: rgb(42, 24, 0);
+    background-color: rgb(172, 172, 223);
+    font-family:'Times New Roman', Times, serif;
+    font-size: 2.5rem;
+}
+
+.card-header{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: rgba(214, 237, 175, 0.855);
+    color: rgb(215, 50, 50);
+}
+
+#btnRetry{
+    background-color: rgba(211, 87, 34, 0.855);
+    border-radius: 5%;
+    font-size: 2rem;
+}
+
+#btnStart{
+    background-color: rgba(62, 175, 50, 0.855);
+    border-radius: 5%;
+    font-size: 2rem;
+}
