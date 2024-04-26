@@ -28,7 +28,7 @@ const personGenerator = {
             "id_3": "Иван",
             "id_4": "Артем",
             "id_5": "Дмитрий",
-            "id_6": "Никита",
+            "id_6": "Сергей",
             "id_7": "Михаил",
             "id_8": "Даниил",
             "id_9": "Егор",
@@ -48,21 +48,6 @@ const personGenerator = {
             "id_8": "Ксения",
             "id_9": "Марина",
             "id_10": "Нина"
-        }
-    }`,
-    patronymicNameJson: `{
-        "count": 10,
-        "list": {     
-            "id_1": "Александров",
-            "id_2": "Максимов",
-            "id_3": "Иванов",
-            "id_4": "Артемов",
-            "id_5": "Дмитриев",
-            "id_6": "Алексеев",
-            "id_7": "Михаилов",
-            "id_8": "Даниилов",
-            "id_9": "Егоров",
-            "id_10": "Андреев"
         }
     }`,
     jobMaleJson: `{
@@ -145,9 +130,13 @@ const personGenerator = {
 
     randomPatrName: function (genders) {
         if (genders===1){
-            return this.randomValue(this.patronymicNameJson)+"ич"; 
+            let genSurName = this.randomValue(this.firstNameMaleJson)+"ович";
+            genSurName = genSurName.replace('йо', 'е');
+            return genSurName; 
         } else {
-        return this.randomValue(this.patronymicNameJson)+"нa"};
+            let genSurName = this.randomValue(this.firstNameMaleJson)+"овна";
+            genSurName = genSurName.replace('йо', 'е');
+            return genSurName };
     },
 
     randomJob: function (genders) {
